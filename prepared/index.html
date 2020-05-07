@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Creating Email templates</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
+    <style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+        }
+    </style>
+</head>
+<body class="shower list">
+
+    <header class="caption">
+        <h1>Creating Email templates</h1>
+        <p>Kristina Vasilevich</p>
+    </header>
+
+    <section class="slide" id="cover">
+        <h2>Создаем email не как в 2007</h2>
+            <img class="cover" src="pictures/cover.png" alt="Colorful envelops sitting on the tree">
+        <style>
+            #cover h2 {
+                margin: 30px 0 0;
+                color: #333333;
+                text-align: center;
+                font-size: 70px;
+            }
+            #cover img {
+                top: 63%;
+            }
+        </style>
+    </section>
+
+    <section class="slide">
+        <h2>Содержание</h2>
+        <ol>
+            <li>Особенности создания email</li>
+            <li>Способы создания шаблона email</li>
+            <li>Примеры создания шаблона email</li>
+            <li>Тестирование email</li>
+        </ol>
+    </section>
+
+    <section class="slide">
+        <h2>1. Особенности создания email</h2>
+        <ul>
+            <li>отсутствие поддержки HTML5 и CSS3 email-клиентами</li>
+            <li>верстка таблицами</li>
+            <li>использование ограниченного числа HTML-тэгов</li>
+            <li>использование inline стилей</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Поддержка HTML5 и CSS3 email-клиентами</h2>
+        <figure>
+            <img class="center-image" src="pictures/flex_support.png" alt="Table of display:flex support for email clients">
+            <figcaption><code>display: flex</code> support by <a href="https://www.caniemail.com/search/?s=flex">Can I Email</a></figcaption>
+        </figure>
+        <style>
+            .center-image {
+                max-width: 100%;
+            }
+            .center-image ~ figcaption {
+                text-align: center;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="table">
+        <h2>Верстка таблицами</h2>
+        <pre>
+            <code class="mark">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"&gt;</code>
+            <code>...</code>
+            <code>&lt;body&gt;</code>
+            <code><mark class="important">&lt;table</mark> border="0" cellpadding="0" cellspacing="0" style="margin:0; padding:0" <mark class="important">&gt;</mark></code>
+            <code>  <mark class="important">&lt;tr&gt;</mark></code>
+            <code>    <mark class="important">&lt;td&gt;</mark></code>
+            <code>      <mark class="important">&lt;center&gt;</mark></code>
+            <code>        <mark class="important">&lt;span</mark> style="color: #333333; font: 10px Arial, sans-serif; line-height: 30px;
+              -webkit-text-size-adjust:none; display: block;" <mark class="important">&gt;</mark>
+              Ваш волшебный контент
+        &lt;/span&gt;</code>
+            <code>        <mark class="important">&lt;a</mark> href="go_to_my_site.com"<mark class="important">&gt;</mark> Ваша волшебная ссылка&lt;/a&gt;</code>
+            <code>        <mark class="important">&lt;img</mark> src="perfect_image.png" alt="Perfect image" <mark>width="200" height="70"</mark> <mark class="important">&gt;</mark></code>
+            <code>      ...</code>
+            <code>&lt;/body&gt;</code>
+        </pre>
+        <style>
+            code {
+                font-size: 16px;
+            }
+            #table {
+                padding-top: 30px;
+            }
+        </style>
+    </section>
+
+    <section class="slide">
+        <h2>2-3. Способы создания шаблона email + примеры</h2>
+        <ul>
+            <li>создание с нуля</li>
+        </ul>
+    </section>
+
+    <section class="slide" id="picture">
+        <h2>2-3. Способы создания шаблона email + примеры</h2>
+        <ul>
+            <li>создание с нуля</li>
+            <li>HTML-шаблон - <a href="https://emailframe.work/">emailframe</a></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>2-3. Способы создания шаблона email + примеры</h2>
+        <ul>
+            <li>создание с нуля</li>
+            <li>HTML-шаблон - <a href="https://emailframe.work/">emailframe</a></li>
+            <li>Онлайн-редактор - <a href="https://mosaico.io/editor-0.17.5.html#26j34w2" target="_blank">mosaico,</a> <a href="https://templates.campaignmonitor.com/canvas/design/13-the-blueprint-3#/editor" target="_blank">campaign monitor</a></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>2-3. Способы создания шаблона email + примеры</h2>
+        <ul>
+            <li>создание с нуля</li>
+            <li>HTML-шаблон - <a href="https://emailframe.work/">emailframe</a></li>
+            <li>Онлайн-редактор - <a href="https://mosaico.io/editor-0.17.5.html#26j34w2" target="_blank">mosaico,</a> <a href="https://templates.campaignmonitor.com/canvas/design/13-the-blueprint-3#/editor" target="_blank">campaign monitor</a></li>
+            <li>email-фреймворк - <a href="https://get.foundation/emails/docs/" target="_blank">Foundation for Emails</a></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>4. Тестирование email</h2>
+        <ul>
+            <li>Проверка валидности разметки - <a href="https://www.htmlemailcheck.com/check/" target="_blank">HTML Email Check</a></li>
+            <li>Отправка тестового письма - <a href="https://putsmail.com/tests/5aa57d36-473b-40d0-bbda-25bdb72c8e54" target="_blank">PutsMail</a></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Спасибо!</h2>
+    </section>
+
+    <div class="progress"></div>
+
+    <script src="shower/shower.js"></script>
+
+</body>
+</html>
